@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<style>
+			@font-face {
+				font-family: "SourceCode";
+				src: url(font/SourceCodePro-Regular.otf);
+			}
+
+			body {
+				background: #ddd;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-family: "Open Sans";
+				font-size: 16px;
+			}
+			
+			body>header {
+				background: white;
+				height: 100px;
+				margin-bottom: 50px;
+			}
+
+			.recipe-book {
+				background: brown;	
+				display: inline-block;
+			}
+
+			.recipe-page {
+				background: white;
+				display: inline-block;
+				width: 690px;
+				height: 540px;
+				margin-left: 5px;
+				margin-right: 5px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			.recipe-left {
+				display: inline-block;
+				width: 30%;
+				margin-right: 4%;
+				border: 1px solid blue;
+				height: 90%;
+				margin-top: 4%;
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			.recipe-right {
+				display: inline-block;
+				width: 55%;
+				border: 1px solid red;
+				height: 90%;
+				margin-top: 4%;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			.recipe-photo {
+				display: inline-block;
+				background: #ddd;
+				width: 100%;
+				min-height: 150px;
+			}
+
+			.recipe-tools {
+				height: 40px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				border: 1px solid green;
+			}
+			
+			.recipe-ingredients {
+
+			}
+
+			.recipe-ingredients:before {
+				content: "Ingredients";
+				color: #8AE65C;
+				font-size: 16px;
+			}
+			
+			.recipe-ingredients {
+				font-size: 0.8em;	
+			}
+
+			.recipe-title {
+				color: #8AE65C;
+				font-size: 1.5em;
+			}
+
+			.recipe-blurb {
+				font-size: 0.8em;
+				font-style: italic;
+				margin-bottom: 5px;
+			}
+
+			.recipe-method {
+
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			RecipeCreator
+		</header>
+		<section class="recipe-book">
+			<section class="recipe-page">
+				<span class="recipe-left">
+					<img class="recipe-photo"/>
+					<div class="recipe-tools">#Serves, Special, Vege, Hot</div>
+					<div class="recipe-ingredients">
+						<br/>Example
+						<br/>Ingredient
+						<br/>List
+					</div>
+				</span>
+				<span class="recipe-right">
+					<header class="recipe-title">Recipe Title</header>
+					<div class="recipe-blurb">About the recipe: Blurb</div>
+					<div class="recipe-method">Methodology</div>
+				</span>
+			</section>
+			<section class="recipe-page">
+				<span class="recipe-left">
+					<img class="recipe-photo"/>
+					<div class="recipe-tools"></div>
+					<div class="recipe-ingredients"></div>
+				</span>
+				<span class="recipe-right">
+					<header class="recipe-title"></header>
+					<div class="recipe-blurb"></div>
+					<div class="recipe-method"></div>
+				</span>
+			</section>
+		</section>
+	</body>
+</html>
