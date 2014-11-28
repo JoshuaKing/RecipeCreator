@@ -1,3 +1,128 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$font-main: "Open Sans";
+$color-main: #8AE65C;
+$color-background: #ddd;
+$color-book: navy;
+$debug: false;
+
+@font-face {
+	font-family: "SourceCode";
+	src: url(font/SourceCodePro-Regular.otf);
+}
+
+body {
+	background: #ddd;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: $font-main;
+	font-size: 16px;
+}
+
+input {
+    boder: none;
+}
+
+.editable {
+    border: none;
+    display: block;
+    width: 100%;
+    resize: none;
+    height: 1.2em;
+        border: 1px solid transparent;
+    
+    &:hover {
+        border: 1px solid #ddd;
+    }
+}
+
+nav {
+    header {
+    	background: white;
+    	height: 100px;
+    	margin-bottom: 50px;
+    }
+}
+
+.recipe-book {
+	background: $color-book;
+	display: inline-block;
+
+    .page {
+    	background: white;
+    	display: inline-block;
+    	width: 690px;
+    	height: 540px;
+    	margin: 5px 5px 5px 5px;
+    }
+    
+    .column {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 4%;
+        height: 90%;
+        text-align: left;
+        color: $color-main;
+        font-size: 16px;
+    }
+
+    .left {
+        @extend .column;
+        width: 30%;
+        margin-right: 4%;
+        @if $debug {
+            border: 1px solid blue;
+        }
+    }
+    
+    .right {
+        @extend .column;
+        width: 55%;
+        @if $debug {
+            border: 1px solid red;
+        }
+    }
+    
+    .photo {
+        display: inline-block;
+        width: 100%;
+        min-height: 150px;
+        @if $debug {
+            background: #ddd;
+        }
+    }
+    
+    .tools {
+        height: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        @if $debug {
+            border: 1px solid green;
+        }
+    }
+    
+    .ingredients {
+        @extend .editable;
+        font-size: 0.8em;
+        height: 260px;
+    }
+    
+    .title {
+        @extend .editable;
+        color: $color-main;
+        font-size: 1.5em;
+    }
+    
+    .blurb {
+        @extend .editable;
+        font-size: 0.8em;
+        font-style: italic;
+        margin-bottom: 5px;
+        height: 2.3em;
+    }
+    
+    .method {
+        @extend .editable;
+        height: 415px;
+    }
+}
